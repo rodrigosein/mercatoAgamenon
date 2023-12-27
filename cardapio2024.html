@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./assets/BG-Cardapio.png');
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .menu-container, .menu-container-2, .menu-container-3, .menu-container-4, .menu-container-5, .menu-container-6, .menu-container-7, .menu-container-8 {
+            background-color: white;
+            margin: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            /*text-align: center;*/
+        }
+
+        section {
+            padding: 20px;
+           /* text-align: center;*/
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .menu-item {
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow: hidden;
+            color: #555;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .menu-item h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .menu-item p {
+            margin: 0;
+        }
+
+        .price {
+            float: right;
+            color: #555;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .side-menu {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu-button {
+            margin: 0px;
+            font-size: 40px;
+            cursor: pointer;
+            display: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .close-button {
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .side-menu {
+                left: 0;
+            }
+
+            .close-button {
+                display: block;
+            }
+        }
+    </style>
+    <title>Mercato Agamenon</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="./assets/Logo-Mercato-Agamenon.png" alt="Logo do Restaurante">
+    </header>
+
+    <nav>
+        <div class="menu-button" onclick="toggleSideMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#mercatoDia">Mercato do Dia</a>
+            <a href="#deckMercato">Deck Mercato</a>
+            <a href="#temakisNaturais">Temakis Naturais</a>
+            <a href="#temakisQuentes">Temakis Quentes</a>
+        </div>
+    </nav>
+
+    <div class="side-menu">
+        <!-- Adicionando o botão de fechar "X" -->
+        <div class="close-button" onclick="toggleSideMenu()">✕</div>
+        <a href="#mercatoDia" onclick="toggleSideMenu()">Mercato do Dia</a>
+        <a href="#deckMercato" onclick="toggleSideMenu()">Deck Mercato</a>
+        <a href="#temakisNaturais" onclick="toggleSideMenu()">Temakis Naturais</a>
+        <a href="#temakisQuentes" onclick="toggleSideMenu()">Temakis Quentes</a>
+    </div>
+
+    <div class="menu-container">
+
+        <section id="mercatoDia">
+            <h2>MERCATO DO DIA</h2>
+            <div class="menu-item">
+               <!-- <img src="caminho/para/entrada1.jpg" alt="Entrada 1"> -->
+                <div>
+                    <h1>2. PROMOCOES</h1>
+                    <p>Descrição da entrada 1.</p>
+                </div>
+                <span class="price">R$ 9,99</span>
+            </div>
+            <div class="menu-item">
+              <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                    <h1>1. PRATOS DO DIA</h1>
+                    <p>Descrição da entrada 2.</p>
+                </div>
+                <span class="price">R$ 12,99</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="menu-container-2">
+
+        <section id="deckMercato">
+            <h2>DECK MERCATO</h2>
+            <!-- Adicione mais pratos principais aqui -->
+            <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                  <div>
+                      <h1>BASTÕES RECHEADOS</h1>
+                      <p>Descrição da entrada 2.</p>
+                  </div>
+                  <span class="price">R$ 19,90</span>
+              </div>
+            <div class="menu-item">
+                <!-- <img src="caminho/para/entrada1.jpg" alt="Entrada 1"> -->
+                 <div>
+                     <h1>BATATA FRITA TRADICIONAL</h1>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 14,90</span>
+             </div>
+             <div class="menu-item">
+               <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                 <div>
+                     <h3>CAMARÕES NO FLOCO DE ARROZ</h3>
+                     <p>Descrição da entrada 2.</p>
+                 </div>
+                 <span class="price">R$ 24,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>CROQUETE DE SALMÃO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 19,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                  <div>
+                      <h3>GUIOSAS</h3>
+                      <p>Descrição da entrada 2.</p>
+                  </div>
+                  <span class="price">R$ 15,90</span>
+              </div>
+              <div class="menu-item">
+                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                 <div>
+                      <h3>TILAPIAS CROCANTES</h3>
+                      <p>Descrição da entrada 1.</p>
+                  </div>
+                  <span class="price">R$ 19,90</span>
+              </div>
+
+        </section>
+    </div>
+
+    <div class="menu-container-3">        
+        <section id="temakisNaturais">
+            <h2>TEMAKIS NATURAIS</h2>
+            <!-- Adicione pratos de sushi aqui -->
+            <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>236. MEU TEMAKI NATURAL</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 25,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                  <div>
+                      <h3>100. TEMAKI DE ATUM</h3>
+                      <p>Descrição da entrada 2.</p>
+                  </div>
+                  <span class="price">R$ 23,90</span>
+              </div>
+              <div class="menu-item">
+                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                 <div>
+                      <h3>86. TEMAKI DE CAMARAO NATURAL</h3>
+                      <p>Descrição da entrada 1.</p>
+                  </div>
+                  <span class="price">R$ 23,90</span>
+              </div>
+              <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>103. TEMAKI DE KANI NATURAL</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 19,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                  <div>
+                      <h3>170. TEMAKI DE PEIXE BRANCO NATURAL</h3>
+                      <p>Descrição da entrada 2.</p>
+                  </div>
+                  <span class="price">R$ 22,90</span>
+              </div>
+              <div class="menu-item">
+                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                 <div>
+                      <h3>189. TEMAKI DE POLVO</h3>
+                      <p>Descrição da entrada 1.</p>
+                  </div>
+                  <span class="price">R$ 24,90</span>
+              </div>
+              <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>84. TEMAKI DE SALMAO NATURAL</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 24,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                  <div>
+                      <h3>178. TEMAKI DE SHIMEJI</h3>
+                      <p>Descrição da entrada 2.</p>
+                  </div>
+                  <span class="price">R$ 20,90</span>
+              </div>
+              <div class="menu-item">
+                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                 <div>
+                      <h3>191. TEMAKI VEGANO</h3>
+                      <p>Descrição da entrada 1.</p>
+                  </div>
+                  <span class="price">R$ 16,90</span>
+              </div>
+        </section>
+    </div>
+
+    <div class="menu-container-4">
+        <section id="temakisQuentes">
+            <h2>TEMAKIS QUENTES</h2>
+            <!-- Adicione sobremesas aqui -->
+            <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>168. TEMAKI DE ATUM CROCANTE</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 22,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>175. TEMAKI DE ATUM EMPANADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 24,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>84. TEMAKI DE CAMARAO CROCANTE</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 20,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>174. TEMAKI DE CAMARAO EMPANADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 24,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>169. TEMAKI DE KANI CROCANTE</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 18,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>176. TEMAKI DE KANI EMPANADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 20,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>172. TEMAKI DE P BRANCO CROCANTE</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 22,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>177. TEMAKI DE P BRANCO EMPANADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 23,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>171. TEMAKI DE P BRANCO MACARICADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 23,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>85. TEMAKI DE SALMAO CROCANTE</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 22,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>173. TEMAKI DE SALMAO EMPANADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 26,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>119. TEMAKI DE SALMAO MACARICADO</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 25,90</span>
+             </div>
+             <div class="menu-item">
+                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
+                <div>
+                     <h3>186. TEMAKI SKIN</h3>
+                     <p>Descrição da entrada 1.</p>
+                 </div>
+                 <span class="price">R$ 15,90</span>
+             </div>
+        </section>
+    </div>
+    </div>
+
+    <script>
+        function toggleSideMenu() {
+            var sideMenu = document.querySelector('.side-menu');
+            sideMenu.style.left = sideMenu.style.left === '0px' ? '-250px' : '0px';
+        }
+    </script>
+
+</body>
+</html>
