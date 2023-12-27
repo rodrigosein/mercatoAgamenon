@@ -443,9 +443,21 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Esconder o menu no início
+            var sideMenu = document.querySelector('.side-menu');
+            sideMenu.style.left = '-250px';
+        });
+
         function toggleSideMenu() {
             var sideMenu = document.querySelector('.side-menu');
-            sideMenu.style.left = sideMenu.style.left === '0px' ? '-250px' : '0px';
+            var isSideMenuOpen = sideMenu.style.left === '0px';
+
+            if (isSideMenuOpen) {
+                sideMenu.style.left = '-250px';
+            } else {
+                sideMenu.style.left = '0px';
+            }
         }
     </script>
 
