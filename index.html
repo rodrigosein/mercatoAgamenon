@@ -15,7 +15,8 @@
         }
 
         header {
-            padding: 20px;
+            padding-left: 0px;
+
             text-align: center;
         }
 
@@ -38,7 +39,10 @@
 
         .menu-container, .menu-container-2, .menu-container-3, .menu-container-4, .menu-container-5, .menu-container-6, .menu-container-7, .menu-container-8 {
             background-color: white;
-            margin: 40px;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+
             border-radius: 8px;
             overflow: hidden;
             /*text-align: center;*/
@@ -70,21 +74,23 @@
 
         .menu-item h3 {
             margin: 0;
-            font-size: 18px;
+            font-size: 12px;
         }
 
         .menu-item h1 {
             margin: 0;
-            font-size: 18px;
+            font-size: 12px;
         }
 
         .menu-item p {
             margin: 0;
+            font-size: 12px;
         }
 
         .price {
             float: right;
             color: #555;
+            font-size: 12px;
         }
 
         .logo {
@@ -137,7 +143,11 @@
             }
 
             .menu-button {
+                padding: 10px;
                 display: block;
+                position: fixed;
+                background: white;
+                border-radius: 8px;
             }
 
             .side-menu {
@@ -154,10 +164,12 @@
 <body>
 
     <header>
+        <div class="menu-button" onclick="toggleSideMenu()">☰</div>
         <img class="logo" src="./assets/Logo-Mercato-Agamenon.png" alt="Logo do Restaurante">
+
     </header>
 
-    <nav>
+    <!--<nav>
         <div class="menu-button" onclick="toggleSideMenu()">☰</div>
         <div class="nav-links">
             <a href="#mercatoDia">Mercato do Dia</a>
@@ -165,7 +177,7 @@
             <a href="#temakisNaturais">Temakis Naturais</a>
             <a href="#temakisQuentes">Temakis Quentes</a>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="side-menu">
         <!-- Adicionando o botão de fechar "X" -->
@@ -182,19 +194,21 @@
             <h2>MERCATO DO DIA</h2>
             <div class="menu-item">
                <!-- <img src="caminho/para/entrada1.jpg" alt="Entrada 1"> -->
-                <div>
-                    <h1>2. PROMOCOES</h1>
-                    <p>Descrição da entrada 1.</p>
-                </div>
-                <span class="price">R$ 9,99</span>
+
+                    <h1>2. PROMOÇÕES
+                    <span class="price">R$ 9,99</span></h1>
+                    <!--<p>Descrição do prato.</p>-->
+
+                
             </div>
             <div class="menu-item">
               <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                    <h1>1. PRATOS DO DIA</h1>
-                    <p>Descrição da entrada 2.</p>
+                    <h1>1. PRATOS DO DIA
+                        <span class="price">R$ 12,99</span></h1>
+                    <!--<p>Descrição do prato.</p>-->
                 </div>
-                <span class="price">R$ 12,99</span>
+
             </div>
         </section>
     </div>
@@ -203,54 +217,57 @@
 
         <section id="deckMercato">
             <h2>DECK MERCATO</h2>
-            <!-- Adicione mais pratos principais aqui -->
+            <!-- Adicione mais pratos principais aqui
+            <div class="menu-item">
+                <img src="caminho/para/entrada2.jpg" alt="Entrada 2">
+                <div>
+                    <h1>BASTÕES RECHEADOS</h1>
+                    <p>Descrição da entrada 2.</p>
+                </div>
+                <span class="price">R$ 19,90</span>
+            </div> -->
             <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                   <div>
-                      <h1>BASTÕES RECHEADOS</h1>
-                      <p>Descrição da entrada 2.</p>
+                      <h1>BASTÕES RECHEADOS           
+                        <span class="price">R$ 19,90</span></h1>
                   </div>
-                  <span class="price">R$ 19,90</span>
+
               </div>
             <div class="menu-item">
                 <!-- <img src="caminho/para/entrada1.jpg" alt="Entrada 1"> -->
                  <div>
-                     <h1>BATATA FRITA TRADICIONAL</h1>
-                     <p>Descrição da entrada 1.</p>
+                     <h1>BATATA FRITA TRADICIONAL<span class="price">R$ 14,90</span></h1>
                  </div>
-                 <span class="price">R$ 14,90</span>
+
              </div>
              <div class="menu-item">
                <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                  <div>
-                     <h3>CAMARÕES NO FLOCO DE ARROZ</h3>
-                     <p>Descrição da entrada 2.</p>
+                     <h3>CAMARÕES NO FLOCO DE ARROZ<span class="price">R$ 24,90</span></h3>
                  </div>
-                 <span class="price">R$ 24,90</span>
+
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>CROQUETE DE SALMÃO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>CROQUETE DE SALMÃO<span class="price">R$ 19,90</span></h3>
                  </div>
-                 <span class="price">R$ 19,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                   <div>
-                      <h3>GUIOSAS</h3>
-                      <p>Descrição da entrada 2.</p>
+                      <h3>GUIOSAS<span class="price">R$ 15,90</span></h3>
                   </div>
-                  <span class="price">R$ 15,90</span>
+                  
               </div>
               <div class="menu-item">
                  <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                  <div>
-                      <h3>TILAPIAS CROCANTES</h3>
-                      <p>Descrição da entrada 1.</p>
+                      <h3>TILAPIAS CROCANTES<span class="price">R$ 19,90</span></h3>
                   </div>
-                  <span class="price">R$ 19,90</span>
+                  
               </div>
 
         </section>
@@ -263,74 +280,65 @@
             <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>236. MEU TEMAKI NATURAL</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>236. MEU TEMAKI NATURAL<span class="price">R$ 25,90</span></h3>
                  </div>
-                 <span class="price">R$ 25,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                   <div>
-                      <h3>100. TEMAKI DE ATUM</h3>
-                      <p>Descrição da entrada 2.</p>
+                      <h3>100. TEMAKI DE ATUM<span class="price">R$ 23,90</span></h3>
                   </div>
-                  <span class="price">R$ 23,90</span>
+                  
               </div>
               <div class="menu-item">
                  <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                  <div>
-                      <h3>86. TEMAKI DE CAMARAO NATURAL</h3>
-                      <p>Descrição da entrada 1.</p>
+                      <h3>86. TEMAKI DE CAMARAO NATURAL<span class="price">R$ 23,90</span></h3>
                   </div>
-                  <span class="price">R$ 23,90</span>
+                  
               </div>
               <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>103. TEMAKI DE KANI NATURAL</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>103. TEMAKI DE KANI NATURAL<span class="price">R$ 19,90</span></h3>
                  </div>
-                 <span class="price">R$ 19,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                   <div>
-                      <h3>170. TEMAKI DE PEIXE BRANCO NATURAL</h3>
-                      <p>Descrição da entrada 2.</p>
+                      <h3>170. TEMAKI DE PEIXE BRANCO NATURAL<span class="price">R$ 22,90</span></h3>
                   </div>
-                  <span class="price">R$ 22,90</span>
+                  
               </div>
               <div class="menu-item">
                  <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                  <div>
-                      <h3>189. TEMAKI DE POLVO</h3>
-                      <p>Descrição da entrada 1.</p>
+                      <h3>189. TEMAKI DE POLVO<span class="price">R$ 24,90</span></h3>
                   </div>
-                  <span class="price">R$ 24,90</span>
+                  
               </div>
               <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>84. TEMAKI DE SALMAO NATURAL</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>84. TEMAKI DE SALMAO NATURAL<span class="price">R$ 24,90</span></h3>
                  </div>
-                 <span class="price">R$ 24,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                   <div>
-                      <h3>178. TEMAKI DE SHIMEJI</h3>
-                      <p>Descrição da entrada 2.</p>
+                      <h3>178. TEMAKI DE SHIMEJI<span class="price">R$ 20,90</span></h3>
                   </div>
-                  <span class="price">R$ 20,90</span>
+                  
               </div>
               <div class="menu-item">
                  <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                  <div>
-                      <h3>191. TEMAKI VEGANO</h3>
-                      <p>Descrição da entrada 1.</p>
+                      <h3>191. TEMAKI VEGANO<span class="price">R$ 16,90</span></h3>
                   </div>
-                  <span class="price">R$ 16,90</span>
+                  
               </div>
         </section>
     </div>
@@ -342,106 +350,93 @@
             <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>168. TEMAKI DE ATUM CROCANTE</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>168. TEMAKI DE ATUM CROCANTE<span class="price">R$ 22,90</span></h3>
                  </div>
-                 <span class="price">R$ 22,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>175. TEMAKI DE ATUM EMPANADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>175. TEMAKI DE ATUM EMPANADO<span class="price">R$ 24,90</span></h3>
                  </div>
-                 <span class="price">R$ 24,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>84. TEMAKI DE CAMARAO CROCANTE</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>84. TEMAKI DE CAMARAO CROCANTE<span class="price">R$ 20,90</span></h3>
                  </div>
-                 <span class="price">R$ 20,90</span>
+
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>174. TEMAKI DE CAMARAO EMPANADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>174. TEMAKI DE CAMARAO EMPANADO<span class="price">R$ 24,90</span></h3>
                  </div>
-                 <span class="price">R$ 24,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>169. TEMAKI DE KANI CROCANTE</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>169. TEMAKI DE KANI CROCANTE<span class="price">R$ 18,90</span></h3>
                  </div>
-                 <span class="price">R$ 18,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>176. TEMAKI DE KANI EMPANADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>176. TEMAKI DE KANI EMPANADO<span class="price">R$ 20,90</span></h3>
                  </div>
-                 <span class="price">R$ 20,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>172. TEMAKI DE P BRANCO CROCANTE</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>172. TEMAKI DE P BRANCO CROCANTE<span class="price">R$ 22,90</span></h3>
                  </div>
-                 <span class="price">R$ 22,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>177. TEMAKI DE P BRANCO EMPANADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>177. TEMAKI DE P BRANCO EMPANADO<span class="price">R$ 23,90</span></h3>
                  </div>
-                 <span class="price">R$ 23,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>171. TEMAKI DE P BRANCO MACARICADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>171. TEMAKI DE P BRANCO MACARICADO<span class="price">R$ 23,90</span></h3>
                  </div>
-                 <span class="price">R$ 23,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>85. TEMAKI DE SALMAO CROCANTE</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>85. TEMAKI DE SALMAO CROCANTE<span class="price">R$ 22,90</span></h3>
                  </div>
-                 <span class="price">R$ 22,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>173. TEMAKI DE SALMAO EMPANADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>173. TEMAKI DE SALMAO EMPANADO<span class="price">R$ 26,90</span></h3>
                  </div>
-                 <span class="price">R$ 26,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>119. TEMAKI DE SALMAO MACARICADO</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>119. TEMAKI DE SALMAO MACARICADO<span class="price">R$ 25,90</span></h3>
                  </div>
-                 <span class="price">R$ 25,90</span>
+                 
              </div>
              <div class="menu-item">
                 <!--  <img src="caminho/para/entrada2.jpg" alt="Entrada 2"> -->
                 <div>
-                     <h3>186. TEMAKI SKIN</h3>
-                     <p>Descrição da entrada 1.</p>
+                     <h3>186. TEMAKI SKIN<span class="price">R$ 15,90</span></h3>
                  </div>
-                 <span class="price">R$ 15,90</span>
+                 
              </div>
         </section>
     </div>
